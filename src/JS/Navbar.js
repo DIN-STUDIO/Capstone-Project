@@ -13,6 +13,9 @@ function Navbar() {
           <li>
             <Link to="/help">Help</Link>        
           </li>
+          <li>
+            <Link to="/test">Test Space</Link>        
+          </li>
         </ul>
       </div>
     );

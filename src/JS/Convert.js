@@ -62,7 +62,7 @@ function Convert() {
             <h1>Image Display</h1>
             {imageURL ? (<img src={imageURL} alt="Server Image" />) : (<p>Loading image...</p>)}
             <input placeholder="text input" />
-            <button>Convert</button>
+            <button>Voice generate</button>
 
             {/* 오디오 로드 */}
             <h1>Audio Player</h1>

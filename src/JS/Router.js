@@ -6,6 +6,7 @@ import Setting from "./Setting";
 import Help from "./Help";
 import Convert from "./Convert";
 import SignIn from "./SignIn";
+import Test from "./Test";
 
 function Router() {
     return (
@@ -18,6 +19,7 @@ function Router() {
           <Route path="/help" element={<Help />} />
           <Route path="/convert" element={<Convert />} />
           <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/test" element={<Test />} />
         </Routes>
       </div>
     );
