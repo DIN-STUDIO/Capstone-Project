@@ -5,9 +5,9 @@ function SignIn() {
 
     return(
         <div>
-            <h1>Here is Sign-in page.</h1>
+            <h1>Here is Redirect page.</h1>
             <input placeholder='Nickname' />
-            <button onClick={ () => navigate("/redirect") }>Sign In</button>
+            <button onClick={ () => navigate("/main") }>Sign In</button>
         </div>
     );
 }

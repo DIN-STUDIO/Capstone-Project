@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
+import { Link } from "react-router-dom";
+
+import Navbar from "./Navbar";
 
 function Main() {
     const navigate = useNavigate();
@@ -92,6 +95,8 @@ function Main() {
 
     return(
         <div>
+            <Link to="/main">Main Logo</Link>
+            <Navbar />
             {/* 다중 이미지 선택 */}
             <label htmlFor='img-input' onChange={selectImage}>
                 <input 
@@ -117,6 +122,7 @@ function Main() {
                 </div>
             )} */}
             <button onClick={uploadImage}>Upload</button>
+            <button onClick={ () => navigate("/") }>Back to Greeting</button>
         </div>
     );
 }

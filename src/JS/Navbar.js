@@ -16,6 +16,9 @@ function Navbar() {
           <li>
             <Link to="/test">Test Space</Link>        
           </li>
+          <li>
+            <Link to="/upload">Upload Page</Link>        
+          </li>
         </ul>
       </div>
     );

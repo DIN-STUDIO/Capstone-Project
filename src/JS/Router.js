@@ -7,19 +7,25 @@ import Help from "./Help";
 import Convert from "./Convert";
 import SignIn from "./SignIn";
 import Test from "./Test";
+import Greeting from "./Greeting";
+import Redirect from "./Redirect";
+import Upload from "./Upload";
 
 function Router() {
     return (
       <div>
         <Routes>
           {/* <Route path="/" element={<Main roopi="hello" mummoo="cute" />} /> */}
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Greeting />} />
+          <Route path="/main" element={<Main />} />
           <Route path="/container" element={<Container />} />
           <Route path="/setting" element={<Setting />} />
           <Route path="/help" element={<Help />} />
           <Route path="/convert" element={<Convert />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/test" element={<Test />} />
+          <Route path="/redirect" element={<Redirect />} />
+          <Route path="/upload" element={<Upload />} />
         </Routes>
       </div>
     );

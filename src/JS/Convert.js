@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from "react-router-dom";
+
+import Navbar from "./Navbar";
 
 function Convert() {
     // 초기 imageURL 값 null 지정
@@ -58,10 +61,13 @@ function Convert() {
   
     return(
         <div>
+            <Link to="/main">Main Logo</Link>
+            <Navbar />
             {/* 이미지 로드 */}
-            <h1>Image Display</h1>
-            {imageURL ? (<img src={imageURL} alt="Server Image" />) : (<p>Loading image...</p>)}
-            <input placeholder="text input" />
+            <h1>Cover Image setting</h1>
+            {imageURL ? (<img src={imageURL} alt="Server Image" />) : (<p>Loading image...ai api call</p>)}
+            <input placeholder='Write your project name' />
+            <input placeholder='Describe your project' />
             <button>Voice generate</button>
 
             {/* 오디오 로드 */}

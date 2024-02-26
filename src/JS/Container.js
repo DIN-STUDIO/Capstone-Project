@@ -55,7 +55,7 @@ function Container() {
                 <p>Loading image...</p>
             )} */}
 
-            {data.map(project => (
+            {testData.map(project => (
               <div>
                 <Link to={`/container/${project.p_name}`}>
                   <img src={project.p_thumbnail} style={{"width" : "200px", "height" : "200px"}}/>
