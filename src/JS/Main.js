@@ -10,13 +10,16 @@ function Main() {
 
     const [selectedImages, setSelectedImage] = useState([]);
 
+    console.log(`selected images length : ${selectedImages.length}`);
+
+
     const selectImage = (event) => {
         // 선택한 file객체를 file 변수에 할당
 
         // 이미지와 이미지 url을 담을 변수 할당
         const imageLists = event.target.files;
 
-        console.log(imageLists[0]);
+        console.log(imageLists);
 
 
 
@@ -36,7 +39,8 @@ function Main() {
                 }
             }
             setSelectedImage(imageUrlLists);
-            console.log(`selected imgs : ${selectedImages}`);
+
+            console.log(`selectedImages length : ${selectedImages.length}`);   
         }
         
         // [단일 이미지 파일 업로드 경우]
@@ -89,7 +93,7 @@ function Main() {
             } catch (error) {   // 에러 발생 메시지
                 console.error('Error during image upload:', error);
             }
-            navigate("/convert");
+            navigate("/project-detail");
         }
     };
 
@@ -98,19 +102,23 @@ function Main() {
             <Link to="/main">Main Logo</Link>
             <Navbar />
             {/* 다중 이미지 선택 */}
-            <label htmlFor='img-input' onChange={selectImage}>
-                <input 
-                    id='img-input'
-                    type="file"
-                    accept="image/*"
-                    multiple
-                />
-            </label>
+            {selectedImages.length === 0 && (
+                <label htmlFor='img-input'>
+                    <input 
+                        id='img-input'
+                        type="file"
+                        accept="image/*"
+                        multiple
+                        onChange={selectImage}
+                    />
+                </label>
+            )}
+
 
             {/* 순회하며 할당된 이미지 출력(미리보기)  */}
             {selectedImages.map((image, id) => (
                 <div key={id}>
-                    <img src={image} alt={`${image} ${id}`}/>
+                    <img src={image} alt={`${image} ${id}`} style={{"width" : "200px", "height" : "200px"}} />
                     <button onClick={() => handleDeleteImages(id)}>Delete</button> 
                 </div>
             ))}

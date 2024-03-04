@@ -10,6 +10,7 @@ import Test from "./Test";
 import Greeting from "./Greeting";
 import Redirect from "./Redirect";
 import Upload from "./Upload";
+import ProjectDetail from "./ProjectDetail";
 
 function Router() {
     return (
@@ -26,6 +27,7 @@ function Router() {
           <Route path="/test" element={<Test />} />
           <Route path="/redirect" element={<Redirect />} />
           <Route path="/upload" element={<Upload />} />
+          <Route path="/project-detail" element={<ProjectDetail />} />
         </Routes>
       </div>
     );
