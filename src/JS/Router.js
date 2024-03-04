@@ -6,7 +6,7 @@ import Setting from "./Setting";
 import Help from "./Help";
 import Convert from "./Convert";
 import SignIn from "./SignIn";
-import Test from "./Test";
+// import Test from "./Test";
 import Greeting from "./Greeting";
 import Redirect from "./Redirect";
 import Upload from "./Upload";
@@ -24,7 +24,7 @@ function Router() {
           <Route path="/help" element={<Help />} />
           <Route path="/convert" element={<Convert />} />
           <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/test" element={<Test />} />
+          {/* <Route path="/test" element={<Test />} /> */}
           <Route path="/redirect" element={<Redirect />} />
           <Route path="/upload" element={<Upload />} />
           <Route path="/project-detail" element={<ProjectDetail />} />
