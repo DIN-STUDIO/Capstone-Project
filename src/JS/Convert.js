@@ -1,10 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router';
 
 import Navbar from "./Navbar";
+import cat1 from "../uploads/cat1.jpg";
+
+// const testData = null;
+const testData = [
+  {
+    p_id : "1",
+    p_name : "cat1",
+    p_date : "240101",
+    p_thumbnail : cat1,
+  },
+];
 
 function Convert() {
+    const navigate = useNavigate();
     // 초기 imageURL 값 null 지정
     const [imageURL, setImageURL] = useState(null);
 
@@ -64,11 +77,17 @@ function Convert() {
             <Link to="/main">Main Logo</Link>
             <Navbar />
             {/* 이미지 로드 */}
-            <h1>Cover Image setting</h1>
-            {imageURL ? (<img src={imageURL} alt="Server Image" />) : (<p>Loading image...ai api call</p>)}
-            <input placeholder='Write your project name' />
-            <input placeholder='Describe your project' />
-            <button>Voice generate</button>
+            
+            {/* {imageURL ? (<img src={imageURL} alt="Server Image" />) : (<p>Loading image...ai api call</p>)} */}
+            {testData ? (
+              testData.map(project => (
+                <div>
+                  <img src={project.p_thumbnail} style={{"width" : "200px", "height" : "200px"}}/>
+                </div>  
+              ))
+            ) : (
+              <p>Loading Image...</p>
+            )}
 
             {/* 오디오 로드 */}
             <h1>Audio Player</h1>
@@ -90,6 +109,7 @@ function Convert() {
             <button>Download</button>
             <button>Save in my container</button>
             <button>Share</button>
+            <button onClick={ () => navigate("/project-detail") }>Back to ProjectDetail page</button>
         </div>
     );
 }

@@ -2,19 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import axios from 'axios';
 
+import cat1 from '../uploads/cat1.jpg';
+import cat2 from '../uploads/cat2.jpg';
+
 // 임시 데이터 (추후 서버에서 불러올 예정)
 const testData = [
   {
     p_id : "1",
-    p_name : "apple",
+    p_name : "cat1",
     p_date : "240101",
-    p_thumbnail : "https://media.istockphoto.com/id/532048136/ko/%EC%82%AC%EC%A7%84/%EC%8B%A0%EC%84%A0%ED%95%9C-%EB%A0%88%EB%93%9C-%EC%82%AC%EA%B3%BC%EB%82%98%EB%AC%B4-%ED%9D%B0%EC%83%89-%EB%B0%94%ED%83%95%EC%97%90-%EA%B7%B8%EB%A6%BC%EC%9E%90%EC%99%80-%ED%81%B4%EB%A6%AC%ED%95%91-%EA%B2%BD%EB%A1%9C%EB%A5%BC-%ED%86%B5%ED%95%B4.jpg?s=612x612&w=0&k=20&c=l-4XlyYaVIf45xtTzsET9iGjnqTcQCxsYi9fxHgS2fg=",
+    p_thumbnail : cat1,
   },
   {
     p_id : "2",
-    p_name : "banana",
+    p_name : "cat2",
     p_date : "240102",
-    p_thumbnail : "https://www.shutterstock.com/image-photo/bunch-bananas-isolated-on-white-600nw-1722111529.jpg",
+    p_thumbnail : cat2,
   },
 ];
 
