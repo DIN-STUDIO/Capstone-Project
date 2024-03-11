@@ -19,5 +19,8 @@ Initial 'Routing Setup' and 'Upload(Main) page', 'Convert page' completed
 * Added the Greeting.js, Redirect.js, and SignIn.js pages according to the figma wireframe.
 
 ### '24.02.26'
+[ProjectDetail.js] added  
+[Main.js] updated
+* Hide 'input' when user enters images
 
 
