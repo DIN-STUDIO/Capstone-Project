@@ -90,7 +90,6 @@ function Convert() {
             )}
 
             {/* 오디오 로드 */}
-            <h1>Audio Player</h1>
             {audioURL ? (
                 <div>
                     <audio controls>
