@@ -1,14 +1,20 @@
-import { useNavigate } from 'react-router';
+// import { useNavigate } from 'react-router';
 
-function SignIn() {
-    const navigate = useNavigate();
+// function SignIn() {
+//     const navigate = useNavigate();
 
-    return(
-        <div>
-            <h1>Here is Redirect page.</h1>
-            <button onClick={ () => navigate("/main") }>Sign In</button>
-        </div>
-    );
-}
+//     const PARAMS = new URL(window.location.href).searchParams;
+//     const KAKAO_CODE = PARAMS.get("code");
+//     // const [accessTokenFetching, setAccessTokenFetching] = useState(false);
 
-export default SignIn;
+//     console.log(`kakao code : ${KAKAO_CODE}`);
+    
+//     return(
+//         <div>
+//             <h1>Here is Redirect page.</h1>
+//             <button onClick={ () => navigate("/main") }>Sign In</button>
+//         </div>
+//     );
+// }
+
+// export default SignIn;
