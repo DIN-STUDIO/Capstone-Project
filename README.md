@@ -23,3 +23,7 @@ Initial 'Routing Setup' and 'Upload(Main) page', 'Convert page' completed
 [Main.js] updated
 * Hide 'input' when user enters images.
 
+### '24.03.11'
+[userState.js] added
+[SignIn.js] updated
+* Social Login page updated.
